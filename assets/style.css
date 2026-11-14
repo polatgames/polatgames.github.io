@@ -1,0 +1,89 @@
+/* PolatGames — Pixel Fill'in ahşap ve şeker renkleri */
+:root {
+  --bg: #F5D6AD;
+  --stripe: #EBC897;
+  --panel: #FFF6E8;
+  --border: #E2B47E;
+  --pink: #FF5C8A;
+  --brown: #8A5A33;
+  --text: #5A3A4A;
+  --orange: #E39A55;
+  --blue: #4FA8F7;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Avenir Next", "Nunito", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background: repeating-linear-gradient(0deg, var(--bg) 0 38px, var(--stripe) 38px 42px);
+  min-height: 100vh;
+}
+
+a { color: #C2335E; }
+
+.wrap { max-width: 860px; margin: 0 auto; padding: 24px 18px 48px; }
+
+header.site {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 10px; margin-bottom: 24px;
+}
+.logo {
+  font-weight: 800; font-size: 1.6rem; text-decoration: none; color: var(--pink);
+  text-shadow: 2px 2px 0 #fff;
+}
+.logo span { color: var(--blue); }
+nav a {
+  display: inline-block; margin-left: 6px; padding: 6px 12px; border-radius: 999px;
+  background: var(--panel); border: 2px solid var(--border); color: var(--brown);
+  font-weight: 700; text-decoration: none; font-size: .9rem;
+}
+nav a:hover { background: #fff; }
+
+.panel {
+  background: var(--panel); border: 3px solid var(--border); border-radius: 22px;
+  padding: 24px; box-shadow: 0 6px 0 #D9A870;
+}
+
+.hero { text-align: center; margin-bottom: 28px; }
+.hero h1 { font-size: 2.4rem; margin: 0 0 6px; color: var(--pink); text-shadow: 2px 2px 0 #fff; }
+.hero p { margin: 0 auto; max-width: 560px; font-size: 1.1rem; color: var(--brown); }
+.dots { display: flex; justify-content: center; gap: 6px; margin: 14px 0 0; }
+.dots i { width: 16px; height: 16px; border-radius: 4px; display: block; }
+
+.game {
+  display: flex; gap: 22px; align-items: center;
+}
+.game img { width: 128px; height: 128px; border-radius: 28px; flex-shrink: 0; box-shadow: 0 4px 10px rgba(90,58,74,.25); }
+.game h2 { margin: 0 0 4px; font-size: 1.7rem; }
+.game p { margin: 0 0 12px; }
+.buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+.btn {
+  display: inline-block; padding: 10px 16px; border-radius: 14px; font-weight: 800;
+  text-decoration: none; color: #fff; background: var(--pink); box-shadow: 0 4px 0 #C2335E;
+}
+.btn.soft { background: var(--orange); box-shadow: 0 4px 0 #B8733A; }
+.btn.blue { background: var(--blue); box-shadow: 0 4px 0 #2F7CC4; }
+.btn.disabled { background: #BFA48A; box-shadow: 0 4px 0 #9C8167; cursor: default; }
+
+.doc h1 { color: var(--pink); margin-top: 0; line-height: 1.25; }
+.doc h2 { font-size: 1.2rem; margin: 28px 0 6px; color: var(--brown); }
+.doc h3 { font-size: 1.05rem; margin: 18px 0 4px; }
+.doc ul { padding-left: 22px; }
+.doc .meta { color: var(--brown); font-size: .9rem; }
+.lang { float: right; font-weight: 700; font-size: .9rem; }
+
+footer { text-align: center; margin-top: 32px; font-size: .9rem; color: var(--brown); }
+
+@media (max-width: 560px) {
+  .hero h1 { font-size: 1.9rem; }
+  .game { flex-direction: column; text-align: center; }
+  .buttons { justify-content: center; }
+  .panel { padding: 18px; }
+  nav a { margin: 0 4px 0 0; }
+  .lang { float: none; display: block; margin-bottom: 8px; }
+}
